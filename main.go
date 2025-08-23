@@ -13,7 +13,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/plain")
-	fmt.Fprint(w, "Hello World from main branch")
+	fmt.Fprint(w, "Hello World from dev branch")
 }
 
 func main() {
