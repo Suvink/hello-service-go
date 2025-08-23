@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: Hello Service API
+  description: A simple Go service that provides a hello world endpoint
+  version: 1.0.0
+  contact:
+    name: Hello Service
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+paths:
+  /hello:
+    get:
+      summary: Get hello world message
+      description: Returns a simple "Hello World" message
+      operationId: getHello
+      responses:
+        '200':
+          description: Successful response with hello world message
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Hello World"
+        '405':
+          description: Method not allowed
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Method not allowed"
+      tags:
+        - Hello
+tags:
+  - name: Hello
+    description: Hello world operations
