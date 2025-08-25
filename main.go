@@ -18,6 +18,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/hello", helloHandler)
+	http.HandleFunc("/hello-secured", helloHandler)
 
 	port := ":8080"
 	fmt.Printf("Server starting on port %s\n", port)

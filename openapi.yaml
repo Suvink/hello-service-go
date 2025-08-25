@@ -32,6 +32,28 @@ paths:
                 example: "Method not allowed"
       tags:
         - Hello
+  /hello-secured:
+    get:
+      summary: Get hello world message
+      description: Returns a simple "Hello World" message
+      operationId: getHelloSecured
+      responses:
+        '200':
+          description: Successful response with hello world message
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Hello World"
+        '405':
+          description: Method not allowed
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Method not allowed"
+      tags:
+        - Hello
 tags:
   - name: Hello
     description: Hello world operations
